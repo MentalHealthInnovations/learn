@@ -10,7 +10,7 @@
 # and 02 use it. Step 03 covers what happened next and switches to OpenTofu for
 # everything after it.
 terraform  = "1.5.7"
-opentofu   = "1.12"
+opentofu   = "1.13.1"
 terragrunt = "1.1.6"
 
 # Runs the commit hooks in .pre-commit-config.yaml.
