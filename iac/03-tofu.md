@@ -4,7 +4,7 @@ No new concepts. This step swaps one binary for another, on the configuration yo
 
 ```
 WORKSPACE=your-name
-cd ~/learn-iac/workspaces/$WORKSPACE
+cd ~/learn/iac/workspaces/$WORKSPACE
 ```
 
 ## 1. Why OpenTofu
@@ -77,7 +77,7 @@ Every command keeps its name and its arguments: `tofu init`, `tofu plan`, `tofu 
 
 Two things to remember for later:
 
-- Terragrunt calls a binary underneath it, and by default that binary is `terraform`. [mise.toml](mise.toml) sets `TG_TF_PATH=tofu` for this repository so that it calls OpenTofu instead. [Step 06](06-terragrunt.md) is where that starts to matter.
+- Terragrunt calls a binary underneath it, and by default that binary is `terraform`. [mise.toml](mise.toml) sets `TG_TF_PATH=tofu` for this course so that it calls OpenTofu instead. [Step 06](06-terragrunt.md) is where that starts to matter.
 - Provider source addresses in `required_providers` still read `hashicorp/random`. That is the name of the provider, not a statement about which registry serves it.
 
 ## If you have time

@@ -4,7 +4,7 @@ You describe the end state you want, and Terraform works out which calls to make
 
 ```
 WORKSPACE=your-name
-cd ~/learn-iac/workspaces/$WORKSPACE
+cd ~/learn/iac/workspaces/$WORKSPACE
 ```
 
 ## 1. Declare what you need
@@ -149,7 +149,7 @@ Leave the `.tf` files where they are. The next step edits them.
 ## 9. Commit
 
 ```
-git add ~/learn-iac/workspaces/$WORKSPACE
+git add ~/learn/iac/workspaces/$WORKSPACE
 git commit -m "step 01: first local resources"
 ```
 

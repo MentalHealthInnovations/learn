@@ -20,9 +20,11 @@ source ~/.zshrc
 ## 2. Clone the repository
 
 ```
-git clone https://github.com/MentalHealthInnovations/learn-iac.git ~/learn-iac
-cd ~/learn-iac
+git clone https://github.com/MentalHealthInnovations/learn.git ~/learn
+cd ~/learn/iac
 ```
+
+The repository holds more than one course. This one lives in `iac/`, and every command from here on runs inside it.
 
 ## 3. Install the tools
 
@@ -34,7 +36,7 @@ mise install
 mkdir -p ~/.terraform.d/plugin-cache
 ```
 
-That installs Terraform, OpenTofu, Terragrunt and pre-commit at the versions in [mise.toml](mise.toml). The first run downloads a few hundred megabytes.
+That installs Terraform, OpenTofu and Terragrunt at the versions in this course's [mise.toml](mise.toml), and pre-commit at the version in the repository's [root mise.toml](../mise.toml). mise reads both, because it merges the config file in the directory you are in with those in every directory above it ([mise configuration docs](https://mise.jdx.dev/configuration.html#configuration-hierarchy)). The first run downloads a few hundred megabytes.
 
 The last line creates the shared provider cache that [mise.toml](mise.toml) points `TF_PLUGIN_CACHE_DIR` at, so each `init` after the first is quick. OpenTofu will not create that directory itself ([OpenTofu CLI configuration docs](https://opentofu.org/docs/cli/config/config-file/)).
 
@@ -44,7 +46,7 @@ The last line creates the shared provider cache that [mise.toml](mise.toml) poin
 pre-commit install
 ```
 
-Checks run on every commit, listed in [.pre-commit-config.yaml](.pre-commit-config.yaml). Two of them matter to you.
+Checks run on every commit, listed in [.pre-commit-config.yaml](../.pre-commit-config.yaml). Two of them matter to you.
 
 `terraform_fmt` rewrites your `.tf` files to the standard layout. When it does, the commit stops and the rewritten file is left unstaged, so you `git add` it again and commit a second time. That is the hook working, not an error.
 

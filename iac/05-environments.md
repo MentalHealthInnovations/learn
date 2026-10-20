@@ -4,7 +4,7 @@ This step is deliberately tedious. You build the same thing three times, by copy
 
 ```
 WORKSPACE=your-name
-cd ~/learn-iac/workspaces/$WORKSPACE
+cd ~/learn/iac/workspaces/$WORKSPACE
 ```
 
 ## 1. The question from step 04
@@ -125,7 +125,7 @@ There is no way to do it except visiting each directory in turn. Miss one and yo
 tofu -chdir=dev destroy
 tofu -chdir=staging destroy
 tofu -chdir=prod destroy
-git add ~/learn-iac/workspaces/$WORKSPACE
+git add ~/learn/iac/workspaces/$WORKSPACE
 git commit -m "step 05: three environments by copy and paste"
 ```
 

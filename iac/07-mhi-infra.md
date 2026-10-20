@@ -104,7 +104,7 @@ Everything so far stayed on your filesystem. What changes when the target is a c
 
 **Nobody applies from a laptop.** A pull request runs a plan in CI. Merging is the approval, and the merge triggers the apply. Permission sets are arranged so that most people can run a plan and cannot write state, rather than relying on everyone remembering.
 
-**Everything is written to be published.** The rules in [the top-level README](README.md) come from this repository, and they are why the bucket module takes a prefix and lets AWS generate the real name, and why access bindings live in an encrypted file.
+**Everything is written to be published.** The rules in [the top-level README](../README.md#this-repository-is-public) come from this repository, and they are why the bucket module takes a prefix and lets AWS generate the real name, and why access bindings live in an encrypted file.
 
 ## Where to go next
 

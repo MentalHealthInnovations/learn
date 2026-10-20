@@ -6,7 +6,7 @@ This step moves your resources out into a module, and what is left behind calls 
 
 ```
 WORKSPACE=your-name
-cd ~/learn-iac/workspaces/$WORKSPACE
+cd ~/learn/iac/workspaces/$WORKSPACE
 ```
 
 ## 1. You have already written one
@@ -190,7 +190,7 @@ A `module` block takes `for_each`, so those two calls could collapse into one bl
 tofu fmt
 tofu validate
 tofu destroy
-git add ~/learn-iac/workspaces/$WORKSPACE
+git add ~/learn/iac/workspaces/$WORKSPACE
 git commit -m "step 04: modules"
 ```
 

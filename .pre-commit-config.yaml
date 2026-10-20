@@ -20,7 +20,7 @@ repos:
       # .gitignore, both of which are large enough to trip this first.
       - id: check-added-large-files
 
-  # Rewrites .tf files to canonical layout. PCT_TFPATH in mise.toml points this
+  # Rewrites .tf files to canonical layout. PCT_TFPATH in iac/mise.toml points this
   # at tofu rather than terraform.
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.108.1
