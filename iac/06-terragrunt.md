@@ -6,7 +6,7 @@ Terragrunt is a thin wrapper, not a fork of OpenTofu, and it does not replace th
 
 ```
 WORKSPACE=your-name
-cd ~/learn-iac/workspaces/$WORKSPACE
+cd ~/learn/iac/workspaces/$WORKSPACE
 ```
 
 ## 1. Write the shared configuration once
@@ -132,7 +132,7 @@ inputs = {
 That points at a module you do not have yet. Copy it, or write your own that takes `pet_names` and `output_dir` and writes one file listing them:
 
 ```
-cp -r ~/learn-iac/reference/06-terragrunt/modules/summary modules/
+cp -r ~/learn/iac/reference/06-terragrunt/modules/summary modules/
 ```
 
 A `dependency` does two things at once. It reads another unit's outputs, and it declares an ordering. Nowhere do you write down that the environments come before the summary.
@@ -194,7 +194,7 @@ Unchanged, deliberately: each environment still has its own state file, in `stat
 
 ```
 terragrunt run --all destroy
-git add ~/learn-iac/workspaces/$WORKSPACE
+git add ~/learn/iac/workspaces/$WORKSPACE
 git commit -m "step 06: terragrunt"
 ```
 

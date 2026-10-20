@@ -4,7 +4,7 @@ You have been committing at the end of every step. This one gets that work revie
 
 ```
 WORKSPACE=your-name
-cd ~/learn-iac
+cd ~/learn/iac
 ```
 
 ## 1. Look at what you have
@@ -38,7 +38,7 @@ If the push is rejected for lack of write access, fork the repository, add your 
 
 ## 3. Write the description
 
-The base branch is `main`. Everything you added lives under `workspaces/$WORKSPACE/`, so your pull request can be merged without waiting for anyone else's.
+The base branch is `main`. Everything you added lives under `iac/workspaces/$WORKSPACE/`, so your pull request can be merged without waiting for anyone else's.
 
 Title it the way the commits are titled: `type: description`, so `docs: worked through the steps` or similar.
 

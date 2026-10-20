@@ -4,7 +4,7 @@ Step 01 wrote every value into the middle of the resource, so that configuration
 
 ```
 WORKSPACE=your-name
-cd ~/learn-iac/workspaces/$WORKSPACE
+cd ~/learn/iac/workspaces/$WORKSPACE
 ```
 
 ## 1. Declare some variables
@@ -140,7 +140,7 @@ Outputs hand a value to a person, a script, or another configuration. The last o
 ```
 terraform fmt
 terraform validate
-git add ~/learn-iac/workspaces/$WORKSPACE
+git add ~/learn/iac/workspaces/$WORKSPACE
 git commit -m "step 02: variables, outputs and for_each"
 ```
 

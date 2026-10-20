@@ -1,30 +1,12 @@
-# Toolchain for learn-iac.
+# Toolchain shared by every course in this repository. Each course pins its own
+# tools in a mise.toml inside its folder, and mise merges that file with this
+# one.
 #
-# Install everything with:  mise install
+# Install everything with:  mise install   (from inside a course folder)
 # Activate per shell with:  eval "$(mise activate zsh)"
 #
 # Versions are pinned so that every terminal behaves the same way.
 
 [tools]
-# 1.5.7 is the last Terraform release under the Mozilla Public Licence. Steps 01
-# and 02 use it. Step 03 covers what happened next and switches to OpenTofu for
-# everything after it.
-terraform  = "1.5.7"
-opentofu   = "1.12"
-terragrunt = "1.1.6"
-
 # Runs the commit hooks in .pre-commit-config.yaml.
 pre-commit = "4.6"
-
-[env]
-# One shared provider download cache for every directory in this repository, so
-# each new step does not re-download the same provider. Step 00 creates the
-# directory, because OpenTofu will not create it itself and skips the cache when
-# it is missing (https://opentofu.org/docs/cli/config/config-file/).
-TF_PLUGIN_CACHE_DIR = "{{env.HOME}}/.terraform.d/plugin-cache"
-
-# Terragrunt calls tofu rather than terraform. Used from step 06.
-TG_TF_PATH = "tofu"
-
-# The terraform_fmt commit hook calls tofu rather than terraform.
-PCT_TFPATH = "tofu"
