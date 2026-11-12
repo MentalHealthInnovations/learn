@@ -12,7 +12,7 @@
 # everything after it.
 terraform  = "1.5.7"
 opentofu   = "1.12"
-terragrunt = "1.1.6"
+terragrunt = "1.2.2"
 
 [env]
 # One shared provider download cache for every directory in this course, so
